@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nagaraj Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #0ea5e9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* MAIN CARD */
+.container {
+    width: 350px;
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
+}
+
+/* PROFILE */
+.profile img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+.profile h2 {
+    margin-top: 10px;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* BUTTONS */
+.btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+
+/* SECTION */
+.section {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #334155;
+    border-radius: 10px;
+    animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* BACK BUTTON */
+.back {
+    margin-top: 10px;
+    background: #398afa;
+    color: white;
+}
+</style>
+
+<script>
+function showSection(id) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("skills").style.display = "none";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById("achievements").style.display = "none";
+
+    document.getElementById(id).style.display = "block";
+}
+
+function goHome() {
+    document.getElementById("home").style.display = "block";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("skills").style.display = "none";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById("achievements").style.display = "none";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HOME -->
+    <div id="home">
+
+        <div class="profile">
+            <!-- ✅ Put your image in same folder and rename to profile.jpg -->
+            <img src="c:\Users\nagar\OneDrive\Desktop\Nagaraj photo.jpg">
+            <h2>Nagaraj Vatagal</h2>
+            <p><b>MCA Student | Software Developer</b></p>
+
+            <!-- 🔥 Tagline -->
+            <p style="color:#4238f8; font-weight:bold;">
+                Passionate Developer | Problem Solver
+            </p>
+        </div>
+
+        <button class="btn" onclick="showSection('about')"> About Me</button>
+        <button class="btn" onclick="showSection('skills')"> Skills</button>
+        <button class="btn" onclick="showSection('projects')">Projects</button>
+        <button class="btn" onclick="showSection('achievements')"> Achievements</button>
+
+        <a href="https://www.linkedin.com/in/nagaraj-vatagal/" target="_blank">
+            <button class="btn">LinkedIn</button>
+        </a>
+
+        <a href="https://github.com/nagarajvatagal87-debug" target="_blank">
+            <button class="btn">GitHub</button>
+        </a>
+
+        <a href="#" target="_blank">
+            <button class="btn"> Instagram</button>
+        </a>
+
+        <!-- 🔥 Resume -->
+        <a href="c:\Users\nagar\OneDrive\Desktop\resume" target="_blank">
+            <button class="btn"> Download Resume</button>
+        </a>
+
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="section">
+        <h3>About Me</h3>
+        <p>
+            I am an MCA student passionate about software development, problem solving, 
+            and building real-world applications.
+        </p>
+        <button class="btn back" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="section">
+        <h3>Skills</h3>
+        <p>Java | Python | HTML | CSS | SQL</p>
+        <button class="btn back" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="section">
+        <h3>Projects</h3>
+        
+        <p><b>College Complaint Redressal System</b></p>
+        <p>Web-based system to manage and resolve student complaints efficiently.</p>
+
+        <br>
+
+        <p><b>Super Market Billing System</b></p>
+        <p>Efficient billing system for supermarkets.</p>
+
+        <br>
+
+        <p><b>Portfolio Website</b></p>
+        <p>Personal portfolio to showcase skills and projects.</p>
+
+        <button class="btn back" onclick="goHome()">⬅ Back</button>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div id="achievements" class="section">
+        <h3>Achievements</h3>
+
+        <p>Preparing for software development roles</p>
+        <p> Strong knowledge in Java and Web Development</p>
+        <p> Developed real-time academic projects</p>
+        <p> Academic excellence during degree</p>
+
+        <button class="btn back" onclick="goHome()">⬅ Back</button>
+    </div>
+
+</div>
+
+</body>
+</html>
